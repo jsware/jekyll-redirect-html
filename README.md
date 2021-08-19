@@ -3,7 +3,7 @@ A Jekyll layout that redirects to a new page.
 
 For Jekyll sites, setting up URL re-writes or HTTP 301 Moved Permanently response codes on HTTP web servers (such as Apache or NGINX) is not possible. If you reorganise your site, external links to your original pages will be broken, which is not a great web experience.
 
-The redirect layout created an HTML redirection page from the original page URL to its new location.
+The redirect layout creates an HTML redirection page from the original page URL to its new location.
 
 ## Installation
 
