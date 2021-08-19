@@ -1,37 +1,21 @@
-## Welcome to GitHub Pages
+# jekyll-redirect-html
+A Jekyll layout that redirects to a new page.
 
-You can use the [editor on GitHub](https://github.com/jsware/jekyll-redirect-html/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
+For Jekyll sites, setting up URL re-writes or HTTP 301 Moved Permanently response codes on HTTP web servers (such as Apache or NGINX) is not possible. If you reorganise your site, external links to your original pages will be broken, which is not a great web experience.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+The redirect layout creates an HTML redirection page from the original page URL to its new location.
 
-### Markdown
+## Installation
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+1. Copy the `_layouts/redirect.html` file to your Jekyll `_layouts` folder.
+1. Optionally create a `_redirects` folder, adding it to the `include:` section of your `_config.yml`.
+1. Create a page with the front matter below. The redirect file name is not important as the original and redirect page URLs are controlled by `permalink` and `redirect` front matter settings.
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+## Redirect Page
+```yaml
+---
+layout: redirect
+permalink: /path/to/original/page/
+redirect: /path/to/correct/page/
+---
 ```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/jsware/jekyll-redirect-html/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
