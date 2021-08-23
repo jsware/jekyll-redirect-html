@@ -5,8 +5,17 @@
 # © 2021 John Scott
 # MIT License
 ---
-<html>
+<html lang="{{ site.locale | slice: 0,2 | default: "en" }}">
   <head>
-    <meta http-equiv="refresh" content="0; url={{ page.redirect | relative_url }}">
+  {%- if page.redirect contains "://" %}
+    <meta http-equiv="refresh" content="0;url={{ page.redirect }}">
+    <link rel="canonical" href="{{ page.redirect }}">
+    <script>location="{{ page.redirect }}"</script>
+  {%- else -%}
+    <meta http-equiv="refresh" content="0;url={{ page.redirect | relative_url }}">
+    <link rel="canonical" href="{{ page.redirect | absolute_url }}">
+    <script>location="{{ page.redirect | relative_url }}"</script>
+  {% endif %}
+    <meta name="robots" content="noindex">
   </head>
 </html>
