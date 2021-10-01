@@ -1,6 +1,19 @@
-# jekyll-redirect-html
-A Jekyll layout that redirects to a new page without using `jekyll-redirect-from` plugin.
-
+---
+title: jekyll-redirect-html
+layout: splash
+header:
+  overlay_image: /assets/images/unsplash.jpg
+  overlay_filter: 0.25
+  actions:
+    - label: "<i class='fas fa-download'></i> Install now"
+      url: "#installation"
+    - label: "<i class='fab fa-github'></i> View on GitHub"
+      url: "https://github.com/jsware/jekyll-redirect-html"
+  caption: "Photo credit: [**Unsplash**](https://unsplash.com/photos/C7B-ExXpOIE)"
+excerpt: >
+  A Jekyll layout that redirects to a new page without using the
+  jekyll-redirect-from plugin.
+---
 For some Jekyll sites, setting up URL re-writes or HTTP 301 Moved Permanently response codes on HTTP web servers (such as Apache or NGINX) is not possible. If you reorganise your site, external links to your original pages will be broken, which is not a great web experience.
 
 The redirect layout creates an HTML redirection page from the original page URL to its new location.
